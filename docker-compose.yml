@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  # Diesen Block auskomentieren, um phpmyadmin nicht zu nutzen
+  # Diesen Block auskommentieren, um phpmyadmin nicht zu nutzen
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:

@@ -141,23 +141,23 @@ VALUES (24002, 5041, 2125, '3.0'),
   (29555, 5041, 2125, '4.0');
 -- --------------------------------------------------------
 --
--- Table structure for table `studenten`
+-- Table structure for table `Studenten`
 --
-DROP TABLE IF EXISTS `studenten`;
-CREATE TABLE IF NOT EXISTS `studenten` (
+DROP TABLE IF EXISTS `Studenten`;
+CREATE TABLE IF NOT EXISTS `Studenten` (
   `MatrNr` int NOT NULL,
   `Name` varchar(30) NOT NULL,
   `Semester` int DEFAULT NULL,
   PRIMARY KEY (`MatrNr`)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 --
--- Truncate table before insert `studenten`
+-- Truncate table before insert `Studenten`
 --
-TRUNCATE TABLE `studenten`;
+TRUNCATE TABLE `Studenten`;
 --
--- Dumping data for table `studenten`
+-- Dumping data for table `Studenten`
 --
-INSERT INTO `studenten` (`MatrNr`, `Name`, `Semester`)
+INSERT INTO `Studenten` (`MatrNr`, `Name`, `Semester`)
 VALUES (24002, 'Xenokrates', 18),
   (25403, 'Jonas', 12),
   (26120, 'Fichte', 10),

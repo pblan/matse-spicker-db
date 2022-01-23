@@ -40,7 +40,7 @@ In der `docker-compose.yml` kann man diese Dinge natürlich manuell ändern:
 version: "3.7"
 
 services:
-# Diesen Block auskomentieren, um phpmyadmin nicht zu nutzen
+# Diesen Block auskommentieren, um phpmyadmin nicht zu nutzen
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:
@@ -68,8 +68,11 @@ services:
 
 Will man nicht alle Datenbanken importieren, einfach die entsprechenden Dateien löschen/aus `dumps` entfernen.
 ## Tipps und Tricks
-Solltet ihr in den SQL-Dump der Datenbank schauen (`dumps/db_pokemon.sql`), wundert euch nicht über die 54306 Zeilen, die wir für die Tabelle `lernt` benötigen. 
+- Solltet ihr in den SQL-Dump der Datenbank schauen (`dumps/db_pokemon.sql`), wundert euch nicht  über die 54306 Zeilen, die wir für die Tabelle `lernt` benötigen. 
 In einer voherigen Version war das eine beinahe 2MB große Zeile...
 
-Im Ordner `mysql_data` liegen die Daten, die die Datenbank im Betrieb erzeugt. 
+- Im Ordner `mysql_data` liegen die Daten, die die Datenbank im Betrieb erzeugt. 
 Vielleicht ist es mal ganz interessant sich das anzuschauen.
+
+- Auch nach einem `docker-compose down` liegen die Daten der letzten Instanz noch im Ordner `mysql_data`! 
+Wollte ihr also einen Clean-Reset, müsst ihr vor dem `docker-compose up -d` einmal den Inhalt des Ordners/den Ordner löschen!
